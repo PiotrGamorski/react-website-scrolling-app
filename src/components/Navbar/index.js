@@ -1,21 +1,45 @@
 import React from "react";
-import { NavLink } from "react-router-dom";
-import { Nav, NavbarContainer, NavLogo } from "./NavbarElements";
+import { FaBars } from "react-icons/fa";
+import {
+  Nav,
+  NavbarContainer,
+  NavLogo,
+  NavMenu,
+  NavItem,
+  NavLinks,
+  MobileIcon,
+  NavBtn,
+  NavBtnLink,
+} from "./NavbarElements";
 
-const Navbar = () => {
+const Navbar = (props) => {
+  const { toggle } = props;
+
   return (
     <>
       <Nav>
         <NavbarContainer>
           <NavLogo to="/">dolla</NavLogo>
-          <MobileIcon>
+          <MobileIcon onClick={() => toggle()}>
             <FaBars />
           </MobileIcon>
-          <NanMenu>
+          <NavMenu>
             <NavItem>
-              <NavLinks to="about" />
+              <NavLinks to="about">About</NavLinks>
             </NavItem>
-          </NanMenu>
+            <NavItem>
+              <NavLinks to="discover">Discover</NavLinks>
+            </NavItem>
+            <NavItem>
+              <NavLinks to="services">Services</NavLinks>
+            </NavItem>
+            <NavItem>
+              <NavLinks to="signup">Sign Up</NavLinks>
+            </NavItem>
+          </NavMenu>
+          <NavBtn>
+            <NavBtnLink to="/signin">Sign In</NavBtnLink>
+          </NavBtn>
         </NavbarContainer>
       </Nav>
     </>
