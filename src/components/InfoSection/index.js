@@ -1,6 +1,5 @@
 import React from "react";
 import { Button } from "../ButtonElement";
-import svg1 from "../../images/svg-1.svg";
 import {
   InfoContainer,
   InfoWrapper,
@@ -27,7 +26,11 @@ const InfoSection = (props) => {
     description,
     darkText,
     buttonLabel,
+    img,
     alt,
+    primary,
+    dark,
+    dark2,
   } = props;
 
   return (
@@ -46,10 +49,11 @@ const InfoSection = (props) => {
                     smooth={true}
                     duration={500}
                     spy={true}
-                    exact={true}
+                    exact="true"
                     offset={-80}
-                    // primary={primary ? 1 : 0}
-                    // dark={dark ? 1 : 0}
+                    primary={primary ? 1 : 0}
+                    dark={dark ? 1 : 0}
+                    dark2={dark2 ? 1 : 0}
                   >
                     {buttonLabel}
                   </Button>
@@ -58,7 +62,7 @@ const InfoSection = (props) => {
             </Column1>
             <Column2>
               <ImgWrap>
-                <InfoImg src={svg1} alt={alt} />
+                <InfoImg src={img} alt={alt} />
               </ImgWrap>
             </Column2>
           </InfoRow>
