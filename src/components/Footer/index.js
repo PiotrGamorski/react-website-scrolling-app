@@ -48,6 +48,14 @@ const Footer = () => {
             </FooterLinkItems>
           </FooterLinkWrapper>
         </FooterLinksContainer>
+        {/* <SocialMedia>
+          <SocialMediaWrapper>
+            <SocialMiediaLogo to="/">dolla</SocialMiediaLogo>
+            <WebsitesRights>
+              dolla © {new Date().getFullYear()} All right reserved.
+            </WebsitesRights>
+          </SocialMediaWrapper>
+        </SocialMedia> */}
       </FooterWrapper>
     </FooterContainer>
   );
