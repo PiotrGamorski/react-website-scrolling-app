@@ -1,4 +1,12 @@
 import React from "react";
+import { animateScroll as scroll } from "react-scroll";
+import {
+  FaFacebook,
+  FaInstagram,
+  FaYoutube,
+  FaTwitter,
+  FaLinkedin,
+} from "react-icons/fa";
 import {
   FooterContainer,
   FooterWrapper,
@@ -7,9 +15,19 @@ import {
   FooterLinkItems,
   FooterLinkTitle,
   FooterLink,
+  SocialMedia,
+  SocialMediaWrapper,
+  SocialMediaLogo,
+  WebsitesRights,
+  SocialIcons,
+  SocialIconLink,
 } from "./FooterElements";
 
 const Footer = () => {
+  const toggleHome = () => {
+    scroll.scrollToTop();
+  };
+
   return (
     <FooterContainer>
       <FooterWrapper>
@@ -48,14 +66,53 @@ const Footer = () => {
             </FooterLinkItems>
           </FooterLinkWrapper>
         </FooterLinksContainer>
-        {/* <SocialMedia>
+        <SocialMedia>
           <SocialMediaWrapper>
-            <SocialMiediaLogo to="/">dolla</SocialMiediaLogo>
+            <SocialMediaLogo to="/" onClick={toggleHome}>
+              dolla
+            </SocialMediaLogo>
             <WebsitesRights>
               dolla © {new Date().getFullYear()} All right reserved.
             </WebsitesRights>
+            <SocialIcons>
+              <SocialIconLink
+                href="//www.facebook.com"
+                target="_blank"
+                aria-label="Facebook"
+              >
+                <FaFacebook />
+              </SocialIconLink>
+              <SocialIconLink
+                href="//www.instagram.com"
+                target="_blank"
+                aria-label="Instagram"
+              >
+                <FaInstagram />
+              </SocialIconLink>
+              <SocialIconLink
+                href="//www.youtube.com"
+                target="_blank"
+                aria-label="YouTube"
+              >
+                <FaYoutube />
+              </SocialIconLink>
+              <SocialIconLink
+                href="//www.twitter.com"
+                target="_blank"
+                aria-label="Twitter"
+              >
+                <FaTwitter />
+              </SocialIconLink>
+              <SocialIconLink
+                href="//www.linked.in"
+                target="_blank"
+                aria-label="LinkedIn"
+              >
+                <FaLinkedin />
+              </SocialIconLink>
+            </SocialIcons>
           </SocialMediaWrapper>
-        </SocialMedia> */}
+        </SocialMedia>
       </FooterWrapper>
     </FooterContainer>
   );
